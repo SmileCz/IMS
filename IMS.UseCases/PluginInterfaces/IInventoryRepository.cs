@@ -2,8 +2,11 @@ using IMS.CoreBusiness;
 
 namespace IMS.UseCases.PluginInterfaces;
 
-public interface IIventoryRepository
+public interface IInventoryRepository
 {
 
     Task<IEnumerable<Inventory>> GetInventoriesByNameAsync(string name);
-}
+    Task AddInventoryAsync(Inventory inventory);
+    Task UpdateInventoryAsync(Inventory inventory);
+    Task<Inventory> GetInventoriesByIdAsync(int inventoryId);
+} 

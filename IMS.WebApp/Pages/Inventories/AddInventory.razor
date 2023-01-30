@@ -1,0 +1,49 @@
+@page "/addinventory"
+@using IMS.UseCases.Inventories
+@inject IAddInventoryUseCase AddInventoryUseCase
+@inject NavigationManager NavigationManager;
+
+<h3>AddInventory</h3>
+<br/>
+<EditForm Model="_inventory" OnValidSubmit="SaveInventoryAsync">
+    <DataAnnotationsValidator />
+    <ValidationSummary/>
+    <div class="form-group mb-3">
+        <label for="name" class="form-label">Inventory Name</label>
+        <InputText id="name" @bind-Value="_inventory.Name" class="form-control"/>
+    </div>
+    <div class="form-group mb-3">
+        <label for="quantity" class="form-label">Quantity</label>
+        <InputNumber id="quantity" @bind-Value="_inventory.Quantity" class="form-control"/>
+    </div>
+    <div class="form-group mb-3">
+        <label for="price" class="form-label">Price</label>
+        <InputNumber id="price" @bind-Value="_inventory.Price" class="form-control"/>
+    </div>
+    <br />
+    <button type="submit" class="btn btn-primary">Save</button>
+    <button type="button" class="btn btn-primary" @onclick="Cancel">Cancel</button>
+</EditForm>
+
+@code {
+
+    private Inventory _inventory = new();
+
+    private async Task SaveInventoryAsync()
+    {
+        await AddInventoryUseCase.ExecuteAsync(_inventory);
+        NavigateBackToInventories();
+    
+    }
+
+    private void Cancel()
+    {
+        NavigateBackToInventories();
+    }
+
+    private void NavigateBackToInventories()
+    {
+        NavigationManager.NavigateTo("/inventories");
+    }
+
+}

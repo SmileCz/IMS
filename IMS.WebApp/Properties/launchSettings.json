@@ -10,7 +10,7 @@
   "profiles": {
     "IMS.WebApp": {
       "commandName": "Project",
-      "dotnetRunMessages": true,
+      "dotnetRunMessages": false,
       "launchBrowser": true,
       "applicationUrl": "https://localhost:7273;http://localhost:5291",
       "environmentVariables": {

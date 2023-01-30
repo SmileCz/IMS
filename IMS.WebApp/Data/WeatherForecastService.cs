@@ -2,12 +2,11 @@ namespace IMS.WebApp.Data;
 
 public class WeatherForecastService
 {
-    private static readonly string[] Summaries = new[]
-    {
+    private static readonly string[] Summaries = {
         "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
     };
 
-    public Task<WeatherForecast[]> GetForecastAsync(DateTime startDate)
+    public Task<WeatherForecast[]>  GetForecastAsync(DateTime startDate)
     {
         return Task.FromResult(Enumerable.Range(1, 5).Select(index => new WeatherForecast
         {

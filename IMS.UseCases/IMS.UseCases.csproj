@@ -6,4 +6,14 @@
         <Nullable>enable</Nullable>
     </PropertyGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\IMS.CoreBusiness\IMS.CoreBusiness.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Compile Update="Inventories\EditInventoryUseCase.cs">
+        <DependentUpon>AddInventoryUseCase.cs</DependentUpon>
+      </Compile>
+    </ItemGroup>
+
 </Project>
