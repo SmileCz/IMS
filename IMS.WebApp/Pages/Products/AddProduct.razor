@@ -1,0 +1,50 @@
+﻿@page "/addproduct"
+@inject NavigationManager NavigationManager
+@inject IAddProductUseCase AddProductUseCase
+<h3>Add Product</h3>
+<br/>
+<EditForm Model="_product" OnValidSubmit="SaveProductAsync">
+    <DataAnnotationsValidator/>
+    <ValidationSummary/>
+    <div class="form-group mb-3">
+        <label for="name" class="form-label">Product Name</label>
+        <InputText id="name" @bind-Value="_product.Name" class="form-control"/>
+    </div>
+    <div class="form-group mb-3">
+        <label for="quantity" class="form-label">Quantity</label>
+        <InputNumber id="quantity" @bind-Value="_product.Quantity" class="form-control"/>
+    </div>
+    <div class="form-group mb-3">
+        <label for="price" class="form-label">Price</label>
+        <InputNumber id="price" @bind-Value="_product.Price" class="form-control"/>
+    </div>
+    <div class="form-group">
+        <label for="invs">Inventories</label>
+        <SearchAndDisplayInventoriesComponent></SearchAndDisplayInventoriesComponent>
+    </div>
+    <br/>
+    <button type="submit" class="btn btn-primary">Save</button>
+    <button type="button" class="btn btn-primary" @onclick="Cancel">Cancel</button>
+</EditForm>
+
+@code {
+
+    private Product _product = new();
+
+    private async Task SaveProductAsync()
+    {
+        await AddProductUseCase.ExecuteAsync(_product);
+        NavigateBackToProducts();
+    }
+
+    private void Cancel()
+    {
+        NavigateBackToProducts();
+    }
+
+    private void NavigateBackToProducts()
+    {
+        NavigationManager.NavigateTo("/products");
+    }
+
+}
