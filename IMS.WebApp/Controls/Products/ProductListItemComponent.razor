@@ -1,12 +1,12 @@
-﻿
+﻿@inject NavigationManager NavigationManager;
 @foreach (var prod in Products)
 {
     <tr>
-    <td>@prod.Name</td>
-    <td>@prod.Quantity</td>
-    <td>@prod.Price.ToString("c")</td>
+        <td>@prod.Name</td>
+        <td>@prod.Quantity</td>
+        <td>@prod.Price.ToString("c")</td>
         <td>
-            <button type="button" class="btn btn-light">Edit</button>
+            <button type="button" class="btn btn-light" @onclick="@(() => EditProduct(prod))">Edit</button>
         </td>
     </tr>
 }
@@ -15,6 +15,12 @@
 @code {
 
     [Parameter]
-    public List<Product> Products { get; set; } = new List<Product>();
+    public List<Product> Products { get; set; } = new();
+
+
+    private void EditProduct(Product product)
+    {
+        NavigationManager.NavigateTo($"/editproduct/{product.Id}");
+    }
 
 }
