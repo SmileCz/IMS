@@ -10,7 +10,7 @@ public class ProductEnsurePriceIsGreaterThanInventoriesCostAttribute : Validatio
         if (ValidatePricing(product)) return ValidationResult.Success;
         if (validationContext.MemberName != null)
             return new ValidationResult(
-                $"The product's price is less than the inventories cost:{TotalInventoriesCost(product).ToString("c")}!",
+                $"The product's price is less than the inventories cost:{TotalInventoriesCost(product):c}!",
                 new List<string>() { validationContext.MemberName });
 
         return ValidationResult.Success;
