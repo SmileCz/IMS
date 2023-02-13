@@ -37,7 +37,7 @@ public class ProductRepository : IProductRepository
         return Task.CompletedTask;
     }
 
-    public async Task<Product> GetProductByIdAsync(int productId)
+    public async Task<Product?> GetProductByIdAsync(int productId)
     {
         var product = _products.First(x => x.Id == productId);
         var newProduct = new Product();
