@@ -1,0 +1,9 @@
+﻿<component name="ProjectRunConfigurationManager">
+    <configuration default="false" name="Publish IMS.WebApp to custom server" type="DotNetPublishAndUpload"
+                   factoryName="Publish to custom server">
+        <riderPublish configuration="Release" platform="Any CPU" runtime="linux-arm64" self_contained="true"
+                      server_id="47746c16-d5a4-48a3-98ac-181fb028d4e1" serverName="OracleCloud"
+                      target_framework="net6.0" uuid_high="7890395225345902365" uuid_low="-8120919401663459939"/>
+        <method v="2"/>
+    </configuration>
+</component>

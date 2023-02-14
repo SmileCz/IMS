@@ -81,13 +81,12 @@ public class ProductRepository : IProductRepository
 
         var prod = _products.FirstOrDefault(x => x.Id == product.Id);
 
-        if (prod is not null)
-        {
-            prod.Name = product.Name;
-            prod.Price = product.Price;
-            prod.Quantity = product.Quantity;
-            prod.ProductInventories = prod.ProductInventories;
-        }
+        if (prod is null) return Task.CompletedTask;
+
+        prod.Name = product.Name;
+        prod.Price = product.Price;
+        prod.Quantity = product.Quantity;
+        prod.ProductInventories = product.ProductInventories;
 
         return Task.CompletedTask;
     }
