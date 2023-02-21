@@ -4,51 +4,27 @@
         type="text"
         class="form-control"
         @bind-value="UserInput"
-        @bind-value:event="oninput"/>
+        @bind-value:event="oninput"
+        @onkeyup="OnKeyUp"/>
 </div>
 @if (_searchResults is not null && _searchResults.Count > 0)
 {
     <div class="search-result">
         <ul>
-            @foreach (var item in _searchResults)
-            {
-                <li @key="item.Id">@item.Name</li>
+            @{
+                var itemIndex = 0;
+                foreach (var item in _searchResults)
+                {
+                    <li
+                        @key="item.Id"
+                        class="@(itemIndex == _currentItemIndex ? "selected" : "")"
+
+                        @onclick="@(() => OnSelectItem(item))">
+                        @item.Name
+                    </li>
+                    itemIndex++;
+                }
             }
         </ul>
     </div>
-}
-
-@code {
-
-    private string _userInput = string.Empty;
-    private List<ItemViewModel>? _searchResults = null;
-
-
-    [Parameter]
-    public string Label { get; set; } = string.Empty;
-
-    [Parameter]
-    public Func<string, List<ItemViewModel>>? SearchFunction { get; set; }
-
-
-    public string UserInput
-    {
-        get => _userInput;
-        set
-        {
-            _userInput = value;
-            if (!string.IsNullOrWhiteSpace(_userInput) && SearchFunction is not null)
-            {
-                _searchResults = SearchFunction(_userInput);
-            }
-        }
-    }
-
-
-    public class ItemViewModel
-    {
-        public int Id { get; set; }
-        public string Name { get; set; }
-    }
-
 }

@@ -1,14 +1,13 @@
 @page "/editinventory/{id:int}"
 @using IMS.UseCases.Inventories.Interfaces
-@using IMS.UseCases.Inventories
 @inject IViewInventoryByIdUseCase ViewInventoryByIdUseCase
 @inject IEditInventoryUseCase EditInventoryUseCase
 @inject NavigationManager NavigationManager;
 
 <h3>EditInventory</h3>
-<br />
+<br/>
 <EditForm Model="_inventory" OnValidSubmit="SaveInventoryAsync">
-    <DataAnnotationsValidator />
+    <DataAnnotationsValidator/>
     <ValidationSummary/>
     <div class="form-group mb-3">
         <label for="name" class="form-label">Inventory Name</label>
@@ -22,7 +21,7 @@
         <label for="price" class="form-label">Price</label>
         <InputNumber id="price" @bind-Value="_inventory.Price" class="form-control"/>
     </div>
-    <br />
+    <br/>
     <button type="submit" class="btn btn-primary">Save</button>
     <button type="button" class="btn btn-primary" @onclick="Cancel">Cancel</button>
 </EditForm>
@@ -34,8 +33,8 @@
 
 
     private Inventory _inventory = new();
-    
-    protected override  async Task OnParametersSetAsync()
+
+    protected override async Task OnParametersSetAsync()
     {
         _inventory = await ViewInventoryByIdUseCase.ExecuteAsync(Id);
     }
@@ -43,11 +42,10 @@
 
     private async Task SaveInventoryAsync()
     {
-
         await EditInventoryUseCase.ExecuteAsync(_inventory);
         NavigateBackToInventories();
     }
-    
+
     private void Cancel()
     {
         NavigateBackToInventories();
@@ -57,4 +55,5 @@
     {
         NavigationManager.NavigateTo("/inventories");
     }
+
 }
