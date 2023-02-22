@@ -1,5 +1,58 @@
-﻿<h3>PurchaseInventory</h3>
+﻿@using IMS.UseCases.Inventories.Interfaces
+@inject IViewInventoriesByNameUseCase ViewInventoriesByNameUseCase;
+@inject IViewInventoryByIdUseCase ViewInventoryByIdUseCase;
+
+<h3>PurchaseInventory</h3>
+<EditForm Model="_purchaseViewModel" OnValidSubmit="Purchase">
+    <DataAnnotationsValidator/>
+    <ValidationSummary/>
+    <div class="form-group">
+        <label for="po">Purchase Order #</label>
+        <InputText class="form-control" id="po" @bind-Value="_purchaseViewModel.PoNumber"/>
+    </div>
+    <div class="card">
+        <div class="card-body">
+            <div class="form-group">
+                <label for="inv">Inventory to Purchase</label>
+                <AutoCompleteComponent `SearchFunction="SearchInventory" OnItemSelected="OnItemSelected"/>
+                @if (_purchaseViewModel.InventoryPrice >= 0)
+                {
+                    <text>Price:</text>
+                    @_purchaseViewModel.InventoryPrice
+                }
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="qty">Quantity</label>
+        <InputText class="form-control" id="qty" @bind-Value="_purchaseViewModel.QuantityToPurchase"/>
+    </div>
+    <br/>
+    <button type="submit" class="btn btn-primary"></button>
+</EditForm>
+
 
 @code {
+
+    private PurchaseViewModel _purchaseViewModel = new();
+
+    private void Purchase()
+    {
+    }
+
+    private List<AutoCompleteComponent.ItemViewModel>? SearchInventory(string name)
+    {
+        var list = ViewInventoriesByNameUseCase.ExecuteAsync(name)
+            .GetAwaiter()
+            .GetResult();
+
+        return list.Select(x => new AutoCompleteComponent.ItemViewModel() { Id = x.Id, Name = x.Name }).ToList();
+    }
+
+    private async Task OnItemSelected(AutoCompleteComponent.ItemViewModel item)
+    {
+        _purchaseViewModel.InventoryId = item.Id;
+        _purchaseViewModel.InventoryPrice = (await ViewInventoryByIdUseCase.ExecuteAsync(item.Id)).Price;
+    }
 
 }

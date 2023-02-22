@@ -1,7 +1,7 @@
 @page "/inventories"
 
 @inject NavigationManager NavigationManager
-@inject IViewInventoriesByNameUseCase ViewInventoriesByNameUseCase;
+
 
 <h3>InventoryList</h3>
 <br/>
@@ -16,21 +16,9 @@
     Add Inventory
 </button>
 
-<p>
-    <AutoCompleteComponent
-        Label="Inventory"
-        SearchFunction="SearchInventory"
-        OnItemSelected="OnItemSelected">
-
-    </AutoCompleteComponent>
-    <br/>
-    @_selectedItem?.Name
-</p>
-
 @code {
 
     private string _searchTerm = string.Empty;
-    private AutoCompleteComponent.ItemViewModel? _selectedItem;
 
     private void OnInventorySearch(string searchTerm)
     {
@@ -42,18 +30,6 @@
         NavigationManager.NavigateTo("/addinventory");
     }
 
-    private List<AutoCompleteComponent.ItemViewModel>? SearchInventory(string name)
-    {
-        var list = ViewInventoriesByNameUseCase.ExecuteAsync(name)
-            .GetAwaiter()
-            .GetResult();
 
-        return list.Select(x => new AutoCompleteComponent.ItemViewModel() { Id = x.Id, Name = x.Name }).ToList();
-    }
-
-    private void OnItemSelected(AutoCompleteComponent.ItemViewModel item)
-    {
-        _selectedItem = item;
-    }
 
 }
