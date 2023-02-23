@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="47746c16-d5a4-48a3-98ac-181fb028d4e1" name="OracleCloud" url="https://ims.gajdusek.eu">
+        <fileTransfer rootFolder="/www/ims.gajdusek.eu/app" accessType="SFTP" host="PlaygroundNET" port="22" sshConfigId="ce551ec6-6d11-46e7-9674-f45485eb3bc6" sshConfig="ubuntu@PlaygroundNET:22 agent" authAgent="true">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
