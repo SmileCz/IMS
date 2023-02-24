@@ -4,17 +4,27 @@
         type="text"
         class="form-control"
         @bind-value="UserInput"
-        @bind-value:event="oninput"/>
+        @bind-value:event="oninput"
+        @onkeyup="OnKeyUp"
+        @onkeyup:stopPropagation="_stopPropagation"/>
 </div>
 @if (_searchResults is not null && _searchResults.Count > 0)
 {
     <div class="search-result">
         <ul>
-            @foreach (var item in _searchResults)
-            {
-                <li @key="item.Id">@item.Name</li>
+            @{
+                var itemIndex = 0;
+                foreach (var item in _searchResults)
+                {
+                    <li @key="item.Id"
+                        @onclick="@(() => OnSelectItem(item))"
+                        class="@(itemIndex == _currentItemIndex ? "selected" : "")">
+                        @item.Name
+                    </li>
+                    itemIndex++;
+                }
+
             }
         </ul>
     </div>
 }
-

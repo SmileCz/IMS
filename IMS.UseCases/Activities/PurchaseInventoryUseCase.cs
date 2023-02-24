@@ -9,9 +9,11 @@ public class PurchaseInventoryUseCase : IPurchaseInventoryUseCase
     private readonly IInventoryRepository _inventoryRepository;
     private readonly IInventoryTransactionRepository _inventoryTransactionRepository;
 
-    public PurchaseInventoryUseCase(IInventoryTransactionRepository inventoryTransactionRepository)
+    public PurchaseInventoryUseCase(IInventoryTransactionRepository inventoryTransactionRepository,
+        IInventoryRepository inventoryRepository)
     {
         _inventoryTransactionRepository = inventoryTransactionRepository;
+        _inventoryRepository = inventoryRepository;
     }
 
     public async Task ExecuteAsync(string poNumber, Inventory inventory, int quantity, string doneBy)

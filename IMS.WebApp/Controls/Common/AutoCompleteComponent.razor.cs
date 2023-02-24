@@ -5,16 +5,21 @@ namespace IMS.WebApp.Controls.Common;
 
 public partial class AutoCompleteComponent : ComponentBase
 {
+    private readonly bool _stopPropagation = true;
     private ItemViewModel? _currentItem = null;
     private int _currentItemIndex = -1;
     private List<ItemViewModel>? _searchResults = null;
     private ItemViewModel? _selectedItem = null;
     private string _userInput = string.Empty;
 
-    [Parameter] public string Label { get; set; } = string.Empty;
+    [Parameter]
+    public string Label { get; set; } = string.Empty;
 
-    [Parameter] public Func<string, List<ItemViewModel>>? SearchFunction { get; set; }
-    [Parameter] public EventCallback<ItemViewModel> OnItemSelected { get; set; }
+    [Parameter]
+    public Func<string, List<ItemViewModel>>? SearchFunction { get; set; }
+
+    [Parameter]
+    public EventCallback<ItemViewModel> OnItemSelected { get; set; }
 
     private string UserInput
     {

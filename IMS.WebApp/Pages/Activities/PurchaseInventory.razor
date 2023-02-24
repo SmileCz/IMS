@@ -1,8 +1,12 @@
-﻿@using IMS.UseCases.Inventories.Interfaces
+﻿@page "/purchase"
+@using IMS.UseCases.Inventories.Interfaces
+@using IMS.UseCases.Activities.Interfaces
 @inject IViewInventoriesByNameUseCase ViewInventoriesByNameUseCase;
 @inject IViewInventoryByIdUseCase ViewInventoryByIdUseCase;
+@inject IPurchaseInventoryUseCase PurchaseInventoryUseCase;
 
-<h3>PurchaseInventory</h3>
+
+<h3>Purchase</h3>
 <EditForm Model="_purchaseViewModel" OnValidSubmit="Purchase">
     <DataAnnotationsValidator/>
     <ValidationSummary/>
@@ -10,34 +14,43 @@
         <label for="po">Purchase Order #</label>
         <InputText class="form-control" id="po" @bind-Value="_purchaseViewModel.PoNumber"/>
     </div>
+    <br/>
     <div class="card">
         <div class="card-body">
             <div class="form-group">
                 <label for="inv">Inventory to Purchase</label>
-                <AutoCompleteComponent `SearchFunction="SearchInventory" OnItemSelected="OnItemSelected"/>
-                @if (_purchaseViewModel.InventoryPrice >= 0)
+                <AutoCompleteComponent SearchFunction="SearchInventory" OnItemSelected="OnItemSelected"/>
+                <input type="hidden" value="@_purchaseViewModel.InventoryId"/>
+                @if (_purchaseViewModel.InventoryId > 0 && _purchaseViewModel.InventoryPrice >= 0)
                 {
                     <text>Price:</text>
-                    @_purchaseViewModel.InventoryPrice
+                    @_purchaseViewModel.InventoryPrice.ToString("c")
                 }
             </div>
         </div>
     </div>
+    <br/>
     <div class="form-group">
         <label for="qty">Quantity</label>
-        <InputText class="form-control" id="qty" @bind-Value="_purchaseViewModel.QuantityToPurchase"/>
+        <InputNumber class="form-control" id="qty" @bind-Value="_purchaseViewModel.QuantityToPurchase"/>
     </div>
     <br/>
-    <button type="submit" class="btn btn-primary"></button>
+    <button type="submit" class="btn btn-primary">Purchase</button>
 </EditForm>
 
 
 @code {
 
     private PurchaseViewModel _purchaseViewModel = new();
+    private Inventory? _selectedInventory;
 
-    private void Purchase()
+    private async Task Purchase()
     {
+        await PurchaseInventoryUseCase.ExecuteAsync(_purchaseViewModel.PoNumber,
+            _selectedInventory,
+            _purchaseViewModel.QuantityToPurchase, "Anynomous");
+        _purchaseViewModel = new();
+        _selectedInventory = null;
     }
 
     private List<AutoCompleteComponent.ItemViewModel>? SearchInventory(string name)
@@ -51,8 +64,9 @@
 
     private async Task OnItemSelected(AutoCompleteComponent.ItemViewModel item)
     {
+        _selectedInventory = await ViewInventoryByIdUseCase.ExecuteAsync(item.Id);
         _purchaseViewModel.InventoryId = item.Id;
-        _purchaseViewModel.InventoryPrice = (await ViewInventoryByIdUseCase.ExecuteAsync(item.Id)).Price;
+        _purchaseViewModel.InventoryPrice = _selectedInventory.Price;
     }
 
 }
