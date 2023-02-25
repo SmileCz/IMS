@@ -1,0 +1,74 @@
+﻿@inject IProduceProductUseCase ProduceProductUseCase
+@inject IViewProductByIdUseCase ViewProductByIdUseCase
+@inject IViewProductsByNameUseCase ViewProductsByNameUseCase
+@inject IJSRuntime JsRuntime
+
+
+@page "/produce"
+<h3>Produce Product</h3>
+<EditForm id="purchase-form" Model="_produceViewModel" OnValidSubmit="Produce">
+    <DataAnnotationsValidator/>
+    <ValidationSummary/>
+    <div class="form-group">
+        <label for="po">Produce Order #</label>
+        <InputText class="form-control" id="po" @bind-Value="_produceViewModel.ProductionNumber"/>
+    </div>
+    <br/>
+    <div class="card">
+        <div class="card-body">
+            <div class="form-group">
+                <label for="inv">Product to produce</label>
+                <AutoCompleteComponent SearchFunction="SearchProduct" OnItemSelected="OnItemSelected"/>
+                <input type="hidden" value="@_produceViewModel.ProductId"/>
+
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="form-group">
+        <label for="qty">Quantity</label>
+        <InputNumber class="form-control" id="qty" @bind-Value="_produceViewModel.QuantityToProduce"/>
+    </div>
+    <br/>
+    <button type="submit" class="btn btn-primary">Produce</button>
+</EditForm>
+
+@code {
+
+    private ProduceViewModel _produceViewModel = new();
+    private Product? _selectedProduct;
+
+    private void Produce()
+    {
+        ProduceProductUseCase.ExecuteAsync(_produceViewModel.ProductionNumber, _selectedProduct, _produceViewModel.QuantityToProduce, "Anynomous");
+        _produceViewModel = new();
+        _selectedProduct = null;
+    }
+
+    private List<AutoCompleteComponent.ItemViewModel>? SearchProduct(string name)
+    {
+        var list = ViewProductsByNameUseCase.ExecuteAsync(name)
+            .GetAwaiter()
+            .GetResult();
+
+        return list.Select(x => new AutoCompleteComponent.ItemViewModel() { Id = x.Id, Name = x.Name })
+            .ToList();
+    }
+
+    private async Task OnItemSelected(AutoCompleteComponent.ItemViewModel item)
+    {
+        _selectedProduct = await ViewProductByIdUseCase.ExecuteAsync(item.Id);
+        _produceViewModel.ProductId = item.Id;
+        _produceViewModel.Product = _selectedProduct;
+    }
+
+    protected override void OnAfterRender(bool firstRender)
+    {
+        base.OnAfterRender(firstRender);
+        if (firstRender)
+        {
+            JsRuntime.InvokeVoidAsync("preventFormSubmition", "purchase-form");
+        }
+    }
+
+}

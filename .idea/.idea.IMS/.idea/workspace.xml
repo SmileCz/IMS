@@ -6,24 +6,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="72481558-121f-4be2-b0a2-1e086920e4ed" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/IMS.CoreBusiness/ProductTransaction.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IMS.CoreBusiness/ProductTransactionType.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IMS.Plugins/IMS.Plugins.InMemory/ProductTransactionRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IMS.UseCases/Activities/Interfaces/IProduceProductUseCase.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IMS.UseCases/Activities/ProduceProductUseCase.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IMS.UseCases/PluginInterfaces/IProductTransactionRepository.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/IMS.WebApp/Pages/Activities/ProduceProduct.razor" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/IMS.WebApp/ViewModels/ProduceViewModel.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/IMS.WebApp/ViewModelsValidations/ProduceEnsureEnoughInventoryQuantityAttribute.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/IMS.WebApp/wwwroot/JSInterOp.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.IMS/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.IMS/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IMS.CoreBusiness/InventoryTransaction.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IMS.CoreBusiness/InventoryTransaction.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IMS.Plugins/IMS.Plugins.InMemory/InventoryTransactionRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IMS.Plugins/IMS.Plugins.InMemory/InventoryTransactionRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IMS.UseCases/Activities/PurchaseInventoryUseCase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IMS.UseCases/Activities/PurchaseInventoryUseCase.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IMS.UseCases/PluginInterfaces/IInventoryTransactionRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IMS.UseCases/PluginInterfaces/IInventoryTransactionRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IMS.WebApp/Controls/Common/AutoCompleteComponent.razor" beforeDir="false" afterPath="$PROJECT_DIR$/IMS.WebApp/Controls/Common/AutoCompleteComponent.razor" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IMS.WebApp/Controls/Common/AutoCompleteComponent.razor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IMS.WebApp/Controls/Common/AutoCompleteComponent.razor.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IMS.WebApp/Controls/Common/AutoCompleteComponent.razor.css" beforeDir="false" afterPath="$PROJECT_DIR$/IMS.WebApp/Controls/Common/AutoCompleteComponent.razor.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/IMS.WebApp/Pages/Activities/PurchaseInventory.razor" beforeDir="false" afterPath="$PROJECT_DIR$/IMS.WebApp/Pages/Activities/PurchaseInventory.razor" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IMS.WebApp/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IMS.WebApp/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IMS.WebApp/Pages/Inventories/InventoryList.razor" beforeDir="false" afterPath="$PROJECT_DIR$/IMS.WebApp/Pages/Inventories/InventoryList.razor" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IMS.WebApp/Pages/_Layout.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/IMS.WebApp/Pages/_Layout.cshtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/IMS.WebApp/Shared/NavMenu.razor" beforeDir="false" afterPath="$PROJECT_DIR$/IMS.WebApp/Shared/NavMenu.razor" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IMS.WebApp/ViewModels/PurchaseViewModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IMS.WebApp/ViewModels/PurchaseViewModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IMS.WebApp/_Imports.razor" beforeDir="false" afterPath="$PROJECT_DIR$/IMS.WebApp/_Imports.razor" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,14 +26,30 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="CSS File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN"
+  }
+}]]></component>
   <component name="GitToolBoxStore">
     <option name="projectConfigVersion" value="5" />
   </component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="92b0a996-ebea-43bf-b890-8c6e9d9d8a2e" />
+        <option name="url" value="https://github.com/SmileCz/IMS.git" />
+      </UrlAndAccount>
+    </option>
+  </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/4b74b6c4aaa81391e03711c258f8938cb5e58ebcef7fca8c5548823dc9e915/ValidationResult.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/869cabb92e82cc3e3fd32a575042337f9bdd2aed2413fbcc4fbdb3a44d1172/Renderer.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/9a3e639d94986eddab1a9a78d348cfaa4f59bc1e3a8cbc3bd46e01ed6f2/Timer.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/IMS.Plugins/IMS.Plugins.InMemory/InventoryRepository.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -135,7 +143,8 @@
       <workItem from="1677150947393" duration="4790000" />
       <workItem from="1677159803347" duration="487000" />
       <workItem from="1677220754817" duration="4189000" />
-      <workItem from="1677225096736" duration="78000" />
+      <workItem from="1677225096736" duration="190000" />
+      <workItem from="1677317117689" duration="7331000" />
     </task>
     <task id="LOCAL-00001" summary="Add edit of product">
       <created>1676286025783</created>
@@ -193,7 +202,14 @@
       <option name="project" value="LOCAL" />
       <updated>1677151047305</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Add ProduceProductUseCase.cs">
+      <created>1677225270020</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1677225270020</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -212,7 +228,8 @@
     <MESSAGE value="Add PurchaseInventory page init and PurchaseViewModel class" />
     <MESSAGE value="PurchaseInventory.razor without implementation of submit button" />
     <MESSAGE value="PC Idea Setting" />
-    <option name="LAST_COMMIT_MESSAGE" value="PC Idea Setting" />
+    <MESSAGE value="Add ProduceProductUseCase.cs" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add ProduceProductUseCase.cs" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
@@ -222,7 +239,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/IMS.WebApp/Pages/Activities/PurchaseInventory.razor</url>
-          <line>68</line>
+          <line>64</line>
           <properties documentPath="D:\Repositories\IMS\IMS.WebApp\Pages\Activities\PurchaseInventory.razor" initialLine="64" isMultiMethodBreakpoint="true">
             <option name="multiMethodBreakpoint" value="true" />
             <startOffsets>
@@ -236,7 +253,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/IMS.WebApp/Pages/Activities/PurchaseInventory.razor</url>
-          <line>50</line>
+          <line>46</line>
           <properties documentPath="D:\Repositories\IMS\IMS.WebApp\Pages\Activities\PurchaseInventory.razor" initialLine="50" isMultiMethodBreakpoint="true">
             <option name="multiMethodBreakpoint" value="true" />
             <startOffsets>
@@ -247,6 +264,20 @@
             </endOffsets>
           </properties>
           <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/IMS.WebApp/Pages/Activities/ProduceProduct.razor</url>
+          <line>67</line>
+          <properties documentPath="D:\Repositories\IMS\IMS.WebApp\Pages\Activities\ProduceProduct.razor" initialLine="67" isMultiMethodBreakpoint="true">
+            <option name="multiMethodBreakpoint" value="true" />
+            <startOffsets>
+              <option value="-1" />
+            </startOffsets>
+            <endOffsets>
+              <option value="-1" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

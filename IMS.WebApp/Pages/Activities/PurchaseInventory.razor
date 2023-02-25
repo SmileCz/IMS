@@ -1,13 +1,11 @@
-﻿@page "/purchase"
-@using IMS.UseCases.Inventories.Interfaces
-@using IMS.UseCases.Activities.Interfaces
-@inject IViewInventoriesByNameUseCase ViewInventoriesByNameUseCase;
+﻿@inject IViewInventoriesByNameUseCase ViewInventoriesByNameUseCase;
 @inject IViewInventoryByIdUseCase ViewInventoryByIdUseCase;
 @inject IPurchaseInventoryUseCase PurchaseInventoryUseCase;
+@inject IJSRuntime JsRuntime;
 
-
+@page "/purchase"
 <h3>Purchase</h3>
-<EditForm Model="_purchaseViewModel" OnValidSubmit="Purchase">
+<EditForm id="purchase-form" Model="_purchaseViewModel" OnValidSubmit="Purchase">
     <DataAnnotationsValidator/>
     <ValidationSummary/>
     <div class="form-group">
@@ -67,6 +65,15 @@
         _selectedInventory = await ViewInventoryByIdUseCase.ExecuteAsync(item.Id);
         _purchaseViewModel.InventoryId = item.Id;
         _purchaseViewModel.InventoryPrice = _selectedInventory.Price;
+    }
+
+    protected override void OnAfterRender(bool firstRender)
+    {
+        base.OnAfterRender(firstRender);
+        if (firstRender)
+        {
+            JsRuntime.InvokeVoidAsync("preventFormSubmition", "purchase-form");
+        }
     }
 
 }
