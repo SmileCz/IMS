@@ -6,18 +6,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="72481558-121f-4be2-b0a2-1e086920e4ed" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/IMS.UseCases/Activities/Interfaces/ISellProductUseCase.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IMS.UseCases/Activities/SellProductUseCase.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/IMS.WebApp/Pages/Activities/SellProduct.razor" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/IMS.WebApp/ViewModels/SellViewModel.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/IMS.WebApp/ViewModelsValidations/SaleEnsureEnoughProductQuantity.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.IMS/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.IMS/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/IMS.Plugins/IMS.Plugins.InMemory/ProductTransactionRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IMS.Plugins/IMS.Plugins.InMemory/ProductTransactionRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IMS.UseCases/Activities/Interfaces/ISellProductUseCase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IMS.UseCases/Activities/Interfaces/ISellProductUseCase.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IMS.UseCases/Activities/SellProductUseCase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IMS.UseCases/Activities/SellProductUseCase.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/IMS.UseCases/PluginInterfaces/IProductTransactionRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IMS.UseCases/PluginInterfaces/IProductTransactionRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IMS.WebApp/Controls/Inventories/InventoryListItemComponent.razor" beforeDir="false" afterPath="$PROJECT_DIR$/IMS.WebApp/Controls/Inventories/InventoryListItemComponent.razor" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IMS.WebApp/Data/WeatherForecast.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IMS.WebApp/Data/WeatherForecastService.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IMS.WebApp/Controls/Inventories/InventoryListComponent.razor" beforeDir="false" afterPath="$PROJECT_DIR$/IMS.WebApp/Controls/Inventories/InventoryListComponent.razor" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/IMS.WebApp/IMS.WebApp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/IMS.WebApp/IMS.WebApp.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IMS.WebApp/Pages/FetchData.razor" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IMS.WebApp/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IMS.WebApp/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IMS.WebApp/ViewModelsValidations/ProduceEnsureEnoughInventoryQuantityAttribute.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IMS.WebApp/ViewModelsValidations/ProduceEnsureEnoughInventoryQuantityAttribute.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IMS.WebApp/Shared/NavMenu.razor" beforeDir="false" afterPath="$PROJECT_DIR$/IMS.WebApp/Shared/NavMenu.razor" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -147,7 +146,8 @@
       <workItem from="1677220754817" duration="4189000" />
       <workItem from="1677225096736" duration="190000" />
       <workItem from="1677317117689" duration="9715000" />
-      <workItem from="1677567522671" duration="531000" />
+      <workItem from="1677567522671" duration="3380000" />
+      <workItem from="1677570975080" duration="95000" />
     </task>
     <task id="LOCAL-00001" summary="Add edit of product">
       <created>1676286025783</created>
@@ -219,7 +219,14 @@
       <option name="project" value="LOCAL" />
       <updated>1677332071411</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Add Sell Product Use Case">
+      <created>1677568098563</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1677568098563</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -240,7 +247,8 @@
     <MESSAGE value="PC Idea Setting" />
     <MESSAGE value="Add ProduceProductUseCase.cs" />
     <MESSAGE value="Add Produce product form" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add Produce product form" />
+    <MESSAGE value="Add Sell Product Use Case" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add Sell Product Use Case" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
