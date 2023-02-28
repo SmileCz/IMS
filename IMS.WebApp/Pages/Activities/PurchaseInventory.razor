@@ -51,11 +51,10 @@
         _selectedInventory = null;
     }
 
-    private List<AutoCompleteComponent.ItemViewModel>? SearchInventory(string name)
+    private async Task<List<AutoCompleteComponent.ItemViewModel>>? SearchInventory(string name)
     {
-        var list = ViewInventoriesByNameUseCase.ExecuteAsync(name)
-            .GetAwaiter()
-            .GetResult();
+        var list = await ViewInventoriesByNameUseCase.ExecuteAsync(name);
+
 
         return list.Select(x => new AutoCompleteComponent.ItemViewModel() { Id = x.Id, Name = x.Name }).ToList();
     }

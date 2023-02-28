@@ -45,11 +45,9 @@
         _selectedProduct = null;
     }
 
-    private List<AutoCompleteComponent.ItemViewModel>? SearchProduct(string name)
+    private async Task<List<AutoCompleteComponent.ItemViewModel>>? SearchProduct(string name)
     {
-        var list = ViewProductsByNameUseCase.ExecuteAsync(name)
-            .GetAwaiter()
-            .GetResult();
+        var list = await ViewProductsByNameUseCase.ExecuteAsync(name);
 
         return list.Select(x => new AutoCompleteComponent.ItemViewModel() { Id = x.Id, Name = x.Name })
             .ToList();

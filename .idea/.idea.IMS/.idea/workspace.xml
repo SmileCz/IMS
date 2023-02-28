@@ -6,17 +6,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="72481558-121f-4be2-b0a2-1e086920e4ed" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/IMS.WebApp/Pages/Activities/SellProduct.razor" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IMS.WebApp/ViewModels/SellViewModel.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IMS.WebApp/ViewModelsValidations/SaleEnsureEnoughProductQuantity.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.IMS/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.IMS/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IMS.Plugins/IMS.Plugins.InMemory/ProductTransactionRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IMS.Plugins/IMS.Plugins.InMemory/ProductTransactionRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IMS.UseCases/Activities/Interfaces/ISellProductUseCase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IMS.UseCases/Activities/Interfaces/ISellProductUseCase.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IMS.UseCases/Activities/SellProductUseCase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IMS.UseCases/Activities/SellProductUseCase.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IMS.UseCases/PluginInterfaces/IProductTransactionRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IMS.UseCases/PluginInterfaces/IProductTransactionRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IMS.WebApp/Controls/Inventories/InventoryListComponent.razor" beforeDir="false" afterPath="$PROJECT_DIR$/IMS.WebApp/Controls/Inventories/InventoryListComponent.razor" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IMS.WebApp/IMS.WebApp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/IMS.WebApp/IMS.WebApp.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IMS.WebApp/Shared/NavMenu.razor" beforeDir="false" afterPath="$PROJECT_DIR$/IMS.WebApp/Shared/NavMenu.razor" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IMS.WebApp/Controls/Common/AutoCompleteComponent.razor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IMS.WebApp/Controls/Common/AutoCompleteComponent.razor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IMS.WebApp/Pages/Activities/ProduceProduct.razor" beforeDir="false" afterPath="$PROJECT_DIR$/IMS.WebApp/Pages/Activities/ProduceProduct.razor" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IMS.WebApp/Pages/Activities/PurchaseInventory.razor" beforeDir="false" afterPath="$PROJECT_DIR$/IMS.WebApp/Pages/Activities/PurchaseInventory.razor" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IMS.WebApp/Pages/Activities/SellProduct.razor" beforeDir="false" afterPath="$PROJECT_DIR$/IMS.WebApp/Pages/Activities/SellProduct.razor" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -147,7 +141,7 @@
       <workItem from="1677225096736" duration="190000" />
       <workItem from="1677317117689" duration="9715000" />
       <workItem from="1677567522671" duration="3380000" />
-      <workItem from="1677570975080" duration="95000" />
+      <workItem from="1677570975080" duration="830000" />
     </task>
     <task id="LOCAL-00001" summary="Add edit of product">
       <created>1676286025783</created>
@@ -226,7 +220,14 @@
       <option name="project" value="LOCAL" />
       <updated>1677568098563</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Sell use case">
+      <created>1677571288944</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1677571288944</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -248,7 +249,8 @@
     <MESSAGE value="Add ProduceProductUseCase.cs" />
     <MESSAGE value="Add Produce product form" />
     <MESSAGE value="Add Sell Product Use Case" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add Sell Product Use Case" />
+    <MESSAGE value="Sell use case" />
+    <option name="LAST_COMMIT_MESSAGE" value="Sell use case" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
@@ -258,7 +260,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/IMS.WebApp/Pages/Activities/PurchaseInventory.razor</url>
-          <line>64</line>
+          <line>63</line>
           <properties documentPath="D:\Repositories\IMS\IMS.WebApp\Pages\Activities\PurchaseInventory.razor" initialLine="64" isMultiMethodBreakpoint="true">
             <option name="multiMethodBreakpoint" value="true" />
             <startOffsets>
@@ -286,7 +288,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/IMS.WebApp/Pages/Activities/ProduceProduct.razor</url>
-          <line>66</line>
+          <line>64</line>
           <properties documentPath="D:\Repositories\IMS\IMS.WebApp\Pages\Activities\ProduceProduct.razor" initialLine="67" isMultiMethodBreakpoint="true">
             <option name="multiMethodBreakpoint" value="true" />
             <startOffsets>

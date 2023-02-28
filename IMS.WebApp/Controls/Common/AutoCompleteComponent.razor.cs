@@ -16,7 +16,7 @@ public partial class AutoCompleteComponent : ComponentBase
     public string Label { get; set; } = string.Empty;
 
     [Parameter]
-    public Func<string, List<ItemViewModel>>? SearchFunction { get; set; }
+    public Func<string, Task<List<ItemViewModel>>>? SearchFunction { get; set; }
 
     [Parameter]
     public EventCallback<ItemViewModel> OnItemSelected { get; set; }
@@ -29,12 +29,25 @@ public partial class AutoCompleteComponent : ComponentBase
             _userInput = value;
             if (!string.IsNullOrWhiteSpace(_userInput) && SearchFunction != null)
             {
-                _searchResults = SearchFunction(_userInput);
+                if (_selectedItem?.Name != _userInput)
+                {
+                    ViewItemAsync();
+                }
             }
             else
             {
                 ClearCurrentItem();
             }
+        }
+    }
+
+    private async Task ViewItemAsync()
+    {
+        if (SearchFunction != null)
+        {
+            _searchResults = await SearchFunction(_userInput);
+            _selectedItem = null;
+            StateHasChanged();
         }
     }
 
