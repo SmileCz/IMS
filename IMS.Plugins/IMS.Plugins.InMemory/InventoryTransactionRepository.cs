@@ -1,11 +1,18 @@
 ﻿using IMS.CoreBusiness;
 using IMS.UseCases.Activities;
+using IMS.UseCases.PluginInterfaces;
 
 namespace IMS.Plugins.InMemory;
 
 public class InventoryTransactionRepository : IInventoryTransactionRepository
 {
+    private readonly IInventoryRepository _inventoryRepository;
     private readonly List<InventoryTransaction> _inventoryTransactions = new();
+
+    public InventoryTransactionRepository(IInventoryRepository inventoryRepository)
+    {
+        _inventoryRepository = inventoryRepository;
+    }
 
     public Task PurchaseAsync(string poNumber, Inventory inventory, int quantity, string doneBy, double price)
     {
@@ -41,5 +48,38 @@ public class InventoryTransactionRepository : IInventoryTransactionRepository
 
 
         return Task.CompletedTask;
+    }
+
+    public async Task<IEnumerable<InventoryTransaction>> GetInventoryTransactions(string inventoryName,
+        DateTime? dateFrom, DateTime? dateTo,
+        InventoryTransactionType? transactionType)
+    {
+        var inventories = (await _inventoryRepository.GetInventoriesByNameAsync(string.Empty)).ToList();
+
+        var query = from it in _inventoryTransactions
+            join inv in inventories on it.InventoryId equals inv.Id
+            where
+                (string.IsNullOrWhiteSpace(inventoryName) || inv.Name.ToLower().IndexOf(inventoryName.ToLower()) >= 0)
+                &&
+                (!dateFrom.HasValue || it.TransactionDate >= dateFrom.Value.Date)
+                &&
+                (!dateTo.HasValue || it.TransactionDate <= dateTo.Value.Date)
+                &&
+                (!transactionType.HasValue || transactionType.Value == it.ActivityType)
+            select new InventoryTransaction
+            {
+                Inventory = inv,
+                ActivityType = it.ActivityType,
+                DoneBy = it.DoneBy,
+                Id = it.Id,
+                InventoryId = it.InventoryId,
+                PoNumber = it.PoNumber,
+                QuantityBefore = it.QuantityBefore,
+                QuantityAfter = it.QuantityAfter,
+                ProductionNumber = it.ProductionNumber,
+                TransactionDate = it.TransactionDate,
+                UnitPrice = it.UnitPrice
+            };
+        return query;
     }
 }

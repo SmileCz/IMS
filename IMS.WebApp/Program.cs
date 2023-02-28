@@ -6,6 +6,7 @@ using IMS.UseCases.Inventories.Interfaces;
 using IMS.UseCases.PluginInterfaces;
 using IMS.UseCases.Products;
 using IMS.UseCases.Products.Interfaces;
+using IMS.UseCases.Reports;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -34,6 +35,8 @@ builder.Services.AddTransient<IPurchaseInventoryUseCase, PurchaseInventoryUseCas
 builder.Services.AddTransient<IProduceProductUseCase, ProduceProductUseCase>();
 builder.Services.AddTransient<ISellProductUseCase, SellProductUseCase>();
 
+
+builder.Services.AddTransient<ISearchInventoryTransactionUseCase, SearchInventoryTransactionUseCase>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
