@@ -17,7 +17,7 @@ public class ProduceEnsureEnoughInventoryQuantityAttribute : ValidationAttribute
             {
                 return new ValidationResult(
                     $"The inventory ({pi.Inventory.Name}) is not enough to produce {produceViewModel.QuantityToProduce} products.",
-                    new[] { validationContext.MemberName });
+                    new[] { validationContext.MemberName }!);
             }
         }
 

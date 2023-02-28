@@ -6,15 +6,14 @@ using IMS.UseCases.Inventories.Interfaces;
 using IMS.UseCases.PluginInterfaces;
 using IMS.UseCases.Products;
 using IMS.UseCases.Products.Interfaces;
-using IMS.WebApp.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+builder.Services.AddControllers();
 builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
-builder.Services.AddLocalization();
-builder.Services.AddSingleton<WeatherForecastService>();
+builder.Services.AddLocalization(options => options.ResourcesPath = "Resources");
 
 builder.Services.AddSingleton<IInventoryRepository, InventoryRepository>();
 builder.Services.AddSingleton<IProductRepository, ProductRepository>();
@@ -33,6 +32,7 @@ builder.Services.AddTransient<IAddProductUseCase, AddProductUseCase>();
 
 builder.Services.AddTransient<IPurchaseInventoryUseCase, PurchaseInventoryUseCase>();
 builder.Services.AddTransient<IProduceProductUseCase, ProduceProductUseCase>();
+builder.Services.AddTransient<ISellProductUseCase, SellProductUseCase>();
 
 var app = builder.Build();
 

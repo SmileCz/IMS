@@ -54,4 +54,21 @@ public class ProductTransactionRepository : IProductTransactionRepository
         });
         //update iventory (decrease amoung of unit in WH)
     }
+
+    public Task SellProductAsync(string salesOrderNumber, Product product, int quantity, string doneBy)
+    {
+        _productTransactions.Add(new ProductTransaction()
+        {
+            SoNumber = salesOrderNumber,
+            ProductId = product.Id,
+            QuantityBefore = product.Quantity,
+            ActivityType = ProductTransactionType.SaleProduct,
+            QuantityAfter = product.Quantity - quantity,
+            TransactionDate = DateTime.Now,
+            DoneBy = doneBy,
+            UnitPrice = product.Price
+        });
+
+        return Task.CompletedTask;
+    }
 }
