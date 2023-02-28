@@ -64,9 +64,9 @@
     }
 
 
-    private void Sell()
+    private async Task Sell()
     {
-        SellProductUseCase.ExecuteAsync(_sellViewModel.SalesOrderNumber, _selectedProduct, _sellViewModel.QuantityToSell, "Anynomous", _sellViewModel.UnitPrice);
+        await SellProductUseCase.ExecuteAsync(_sellViewModel.SalesOrderNumber, _selectedProduct, _sellViewModel.QuantityToSell, "Anynomous", _sellViewModel.UnitPrice);
         _sellViewModel = new();
         _selectedProduct = null;
     }

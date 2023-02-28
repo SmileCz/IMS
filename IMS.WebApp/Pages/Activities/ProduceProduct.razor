@@ -38,9 +38,9 @@
     private ProduceViewModel _produceViewModel = new();
     private Product? _selectedProduct;
 
-    private void Produce()
+    private async Task Produce()
     {
-        ProduceProductUseCase.ExecuteAsync(_produceViewModel.ProductionNumber, _selectedProduct, _produceViewModel.QuantityToProduce, "Anynomous");
+        await ProduceProductUseCase.ExecuteAsync(_produceViewModel.ProductionNumber, _selectedProduct, _produceViewModel.QuantityToProduce, "Anynomous");
         _produceViewModel = new();
         _selectedProduct = null;
     }

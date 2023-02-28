@@ -9,7 +9,6 @@
       <change beforePath="$PROJECT_DIR$/.idea/.idea.IMS/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.IMS/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/IMS.WebApp/Controls/Common/AutoCompleteComponent.razor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IMS.WebApp/Controls/Common/AutoCompleteComponent.razor.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/IMS.WebApp/Pages/Activities/ProduceProduct.razor" beforeDir="false" afterPath="$PROJECT_DIR$/IMS.WebApp/Pages/Activities/ProduceProduct.razor" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IMS.WebApp/Pages/Activities/PurchaseInventory.razor" beforeDir="false" afterPath="$PROJECT_DIR$/IMS.WebApp/Pages/Activities/PurchaseInventory.razor" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/IMS.WebApp/Pages/Activities/SellProduct.razor" beforeDir="false" afterPath="$PROJECT_DIR$/IMS.WebApp/Pages/Activities/SellProduct.razor" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -79,7 +78,7 @@
     ]
   }
 }</component>
-  <component name="RunManager" selected=".NET Launch Settings Profile.IMS.WebApp">
+  <component name="RunManager" selected="Publish to custom server.Publish IMS.WebApp to custom server">
     <configuration name="IMS.WebApp" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
       <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/IMS.WebApp/IMS.WebApp.csproj" />
       <option name="LAUNCH_PROFILE_TFM" value="net6.0" />
@@ -141,7 +140,7 @@
       <workItem from="1677225096736" duration="190000" />
       <workItem from="1677317117689" duration="9715000" />
       <workItem from="1677567522671" duration="3380000" />
-      <workItem from="1677570975080" duration="830000" />
+      <workItem from="1677570975080" duration="1742000" />
     </task>
     <task id="LOCAL-00001" summary="Add edit of product">
       <created>1676286025783</created>
@@ -227,7 +226,14 @@
       <option name="project" value="LOCAL" />
       <updated>1677571288944</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Do AutoCompleteComponent asynchronous">
+      <created>1677571886271</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1677571886271</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -250,7 +256,8 @@
     <MESSAGE value="Add Produce product form" />
     <MESSAGE value="Add Sell Product Use Case" />
     <MESSAGE value="Sell use case" />
-    <option name="LAST_COMMIT_MESSAGE" value="Sell use case" />
+    <MESSAGE value="Do AutoCompleteComponent asynchronous" />
+    <option name="LAST_COMMIT_MESSAGE" value="Do AutoCompleteComponent asynchronous" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
