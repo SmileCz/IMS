@@ -1,0 +1,51 @@
+﻿@page "/reports/inventory"
+<h3>Inventory Transactions</h3>
+<br/>
+
+<div class="row">
+    <div class="col-4">
+        <label for="invName">Inventory Name</label>
+        <input id="invName" type="text" class="form-control" @bind-value="_inventoryName"/>
+    </div>
+    <div class="col">
+        <label for="dateFrom">Date From</label>
+        <input id="dateFrom" type="date" class="form-control" @bind-value="_dateFrom"/>
+    </div>
+    <div class="col">
+        <label for="dateTo">Date To</label>
+        <input id="dateTo" type="date" class="form-control" @bind-value="_dateTo"/>
+    </div>
+    <div class="col">
+        <label for="activityType">Activity Type</label>
+        <select id="activityType" class="form-control" @bind="_activityTypeId">
+            <option value="0"></option>
+            <option value="1">Purchase Inventory</option>
+            <option value="2">Produce Product</option>
+        </select>
+    </div>
+    <div class="col">
+        <label>&nbsp;</label>
+        <button class="btn btn-primary form-control" @onclick="SearchInventoryTransactions">Search</button>
+    </div>
+    <div class="col">
+        <label>&nbsp;</label>
+        <button class="btn btn-primary form-control" @onclick="PrintReport">Print</button>
+    </div>
+</div>
+
+
+@code {
+    private string? _inventoryName = string.Empty;
+    private DateTime _dateFrom = DateTime.Today;
+    private DateTime _dateTo = DateTime.Today.AddDays(1);
+    private int _activityTypeId = 0;
+
+    private void PrintReport()
+    {
+    }
+
+    private void SearchInventoryTransactions()
+    {
+    }
+
+}
