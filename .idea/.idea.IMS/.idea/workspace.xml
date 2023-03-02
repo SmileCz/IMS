@@ -6,10 +6,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="72481558-121f-4be2-b0a2-1e086920e4ed" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/IMS.UseCases/Reports/Interfaces/ISearchProductTransactionUseCase.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/IMS.UseCases/Reports/SearchProductTransactionUseCase.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/IMS.WebApp/Pages/Reports/ProductTransactionReport.razor" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.IMS/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.IMS/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IMS.Plugins/IMS.Plugins.InMemory/ProductTransactionRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IMS.Plugins/IMS.Plugins.InMemory/ProductTransactionRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IMS.UseCases/PluginInterfaces/IProductTransactionRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IMS.UseCases/PluginInterfaces/IProductTransactionRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IMS.WebApp/IMS.WebApp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/IMS.WebApp/IMS.WebApp.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/IMS.WebApp/Pages/Reports/InventoryTransactionReport.razor" beforeDir="false" afterPath="$PROJECT_DIR$/IMS.WebApp/Pages/Reports/InventoryTransactionReport.razor" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IMS.WebApp/Shared/NavMenu.razor" beforeDir="false" afterPath="$PROJECT_DIR$/IMS.WebApp/Shared/NavMenu.razor" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IMS.WebApp/_Imports.razor" beforeDir="false" afterPath="$PROJECT_DIR$/IMS.WebApp/_Imports.razor" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IMS.WebApp/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IMS.WebApp/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IMS.WebApp/wwwroot/css/site.css" beforeDir="false" afterPath="$PROJECT_DIR$/IMS.WebApp/wwwroot/css/site.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,9 +47,13 @@
     </option>
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/4b74b6c4aaa81391e03711c258f8938cb5e58ebcef7fca8c5548823dc9e915/ValidationResult.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/869cabb92e82cc3e3fd32a575042337f9bdd2aed2413fbcc4fbdb3a44d1172/Renderer.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/9a3e639d94986eddab1a9a78d348cfaa4f59bc1e3a8cbc3bd46e01ed6f2/Timer.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/e4aeff2964b57fa3d88b3b827c8344358321bf183055702dd3aed52b8f7c97/ComponentState.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/IMS.Plugins/IMS.Plugins.InMemory/InventoryRepository.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -59,25 +69,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;XThreadsFramesViewSplitterKey&quot;: &quot;0.49923897&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.sourceCode.C#&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "XThreadsFramesViewSplitterKey": "0.49923897",
+    "list.type.of.created.stylesheet": "CSS",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "editor.preferences.smartKeys_rider",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;rider.external.source.directories&quot;: [
-      &quot;C:\\Users\\pavel\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\DecompilerCache&quot;,
-      &quot;C:\\Users\\pavel\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\SourcesCache&quot;,
-      &quot;C:\\Users\\pavel\\AppData\\Local\\Symbols\\src&quot;
+  "keyToStringList": {
+    "rider.external.source.directories": [
+      "C:\\Users\\pavel\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\DecompilerCache",
+      "C:\\Users\\pavel\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\SourcesCache",
+      "C:\\Users\\pavel\\AppData\\Local\\Symbols\\src"
     ]
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected=".NET Launch Settings Profile.IMS.WebApp">
     <configuration name="IMS.WebApp" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
       <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/IMS.WebApp/IMS.WebApp.csproj" />
@@ -146,7 +156,7 @@
       <workItem from="1677673646446" duration="3802000" />
       <workItem from="1677691123399" duration="841000" />
       <workItem from="1677692020008" duration="113000" />
-      <workItem from="1677765898827" duration="2094000" />
+      <workItem from="1677765898827" duration="7961000" />
     </task>
     <task id="LOCAL-00001" summary="Add edit of product">
       <created>1676286025783</created>
@@ -260,7 +270,14 @@
       <option name="project" value="LOCAL" />
       <updated>1677678056485</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Inventory Transaction Report finished">
+      <created>1677768061149</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1677768061149</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -287,7 +304,8 @@
     <MESSAGE value="AutocompleteComponent use asynchronous method instead of normal method" />
     <MESSAGE value="Add SearchInventoryTransaction use case" />
     <MESSAGE value="Add Inventory Transaction Report page without functionality" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add Inventory Transaction Report page without functionality" />
+    <MESSAGE value="Inventory Transaction Report finished" />
+    <option name="LAST_COMMIT_MESSAGE" value="Inventory Transaction Report finished" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
@@ -339,7 +357,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/IMS.WebApp/Pages/Reports/InventoryTransactionReport.razor</url>
-          <line>98</line>
+          <line>117</line>
           <properties documentPath="D:\Repositories\IMS\IMS.WebApp\Pages\Reports\InventoryTransactionReport.razor" initialLine="59" isMultiMethodBreakpoint="true">
             <option name="multiMethodBreakpoint" value="true" />
             <startOffsets>
@@ -351,11 +369,25 @@
           </properties>
           <option name="timeStamp" value="4" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/IMS.WebApp/Pages/Reports/ProductTransactionReport.razor</url>
+          <line>40</line>
+          <properties documentPath="D:\Repositories\IMS\IMS.WebApp\Pages\Reports\ProductTransactionReport.razor" initialLine="39" isMultiMethodBreakpoint="true">
+            <option name="multiMethodBreakpoint" value="true" />
+            <startOffsets>
+              <option value="-1" />
+            </startOffsets>
+            <endOffsets>
+              <option value="-1" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <watches-manager>
       <configuration name="LaunchSettings">
-        <watch expression="list.Select(x =&gt; new AutoCompleteComponent.ItemViewModel() { Id = x.Id, Name = x.Name }).ToList();" language="Blazor" />
+        <watch expression="_productTransactions.Count() &gt; 0" language="Blazor" />
       </configuration>
     </watches-manager>
   </component>
