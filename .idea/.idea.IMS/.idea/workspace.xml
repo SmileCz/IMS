@@ -6,10 +6,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="72481558-121f-4be2-b0a2-1e086920e4ed" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/IMS.WebApp/Pages/Reports/InventoryTransactionReport.razor" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.IMS/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.IMS/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IMS.WebApp/IMS.WebApp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/IMS.WebApp/IMS.WebApp.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IMS.WebApp/Pages/Reports/InventoryTransactionReport.razor" beforeDir="false" afterPath="$PROJECT_DIR$/IMS.WebApp/Pages/Reports/InventoryTransactionReport.razor" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IMS.WebApp/Shared/NavMenu.razor" beforeDir="false" afterPath="$PROJECT_DIR$/IMS.WebApp/Shared/NavMenu.razor" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IMS.WebApp/_Imports.razor" beforeDir="false" afterPath="$PROJECT_DIR$/IMS.WebApp/_Imports.razor" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -143,7 +143,10 @@
       <workItem from="1677570975080" duration="1799000" />
       <workItem from="1677599894982" duration="2079000" />
       <workItem from="1677652854526" duration="589000" />
-      <workItem from="1677673646446" duration="3764000" />
+      <workItem from="1677673646446" duration="3802000" />
+      <workItem from="1677691123399" duration="841000" />
+      <workItem from="1677692020008" duration="113000" />
+      <workItem from="1677765898827" duration="2094000" />
     </task>
     <task id="LOCAL-00001" summary="Add edit of product">
       <created>1676286025783</created>
@@ -250,7 +253,14 @@
       <option name="project" value="LOCAL" />
       <updated>1677601968039</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Add Inventory Transaction Report page without functionality">
+      <created>1677678056485</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1677678056485</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -276,7 +286,8 @@
     <MESSAGE value="Do AutoCompleteComponent asynchronous" />
     <MESSAGE value="AutocompleteComponent use asynchronous method instead of normal method" />
     <MESSAGE value="Add SearchInventoryTransaction use case" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add SearchInventoryTransaction use case" />
+    <MESSAGE value="Add Inventory Transaction Report page without functionality" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add Inventory Transaction Report page without functionality" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
@@ -325,6 +336,20 @@
             </endOffsets>
           </properties>
           <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/IMS.WebApp/Pages/Reports/InventoryTransactionReport.razor</url>
+          <line>98</line>
+          <properties documentPath="D:\Repositories\IMS\IMS.WebApp\Pages\Reports\InventoryTransactionReport.razor" initialLine="59" isMultiMethodBreakpoint="true">
+            <option name="multiMethodBreakpoint" value="true" />
+            <startOffsets>
+              <option value="-1" />
+            </startOffsets>
+            <endOffsets>
+              <option value="-1" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="4" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

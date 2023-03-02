@@ -1,4 +1,8 @@
-﻿@page "/reports/inventory"
+﻿@inject ISearchInventoryTransactionUseCase SearchInventoryTransactionUseCase
+
+
+@page "/reports/inventory"
+
 <h3>Inventory Transactions</h3>
 <br/>
 
@@ -17,7 +21,7 @@
     </div>
     <div class="col">
         <label for="activityType">Activity Type</label>
-        <select id="activityType" class="form-control" @bind="_activityTypeId">
+        <select id="activityType" class="form-control" @bind="_inventoryTransactionTypeId">
             <option value="0"></option>
             <option value="1">Purchase Inventory</option>
             <option value="2">Produce Product</option>
@@ -32,20 +36,73 @@
         <button class="btn btn-primary form-control" @onclick="PrintReport">Print</button>
     </div>
 </div>
+<br/>
+@if (_inventoryTransactions is not null)
+{
+    _inventoryTransactions.Count();
+    <table class="table table-striped table-sm">
+        <thead>
+        <tr class="table-primary">
+            <th scope="col">Date</th>
+            <th scope="col">Inventory</th>
+            <th scope="col">Activity</th>
+            <th scope="col">Qty Before</th>
+            <th scope="col">Qty After</th>
+            <th scope="col">PO#</th>
+            <th scope="col">Production#</th>
+        </tr>
+        </thead>
+        <tbody>
+        @foreach (var it in _inventoryTransactions)
+        {
+            <tr>
+                <td scope="row">@it.TransactionDate.ToString("MM/dd//yyyy")</td>
+                <td>@it.Inventory?.Name</td>
+                <td>
+                    @switch (it.ActivityType)
+                    {
+                        case InventoryTransactionType.PurchaseInventory:
+                            @:Purchase
+                            break;
+                        case InventoryTransactionType.ProduceProduct:
+                            @:Produce
+                            break;
+                        default:
+                            @:&nbsp;
+                            break;
+                    }
+                </td>
+                <td>@it.QuantityBefore</td>
+                <td>@it.QuantityAfter</td>
+                <td>@it.PoNumber</td>
+                <td>@it.ProductionNumber</td>
 
+            </tr>
+        }
+        </tbody>
+    </table>
+}
 
 @code {
-    private string? _inventoryName = string.Empty;
-    private DateTime _dateFrom = DateTime.Today;
-    private DateTime _dateTo = DateTime.Today.AddDays(1);
-    private int _activityTypeId = 0;
+    private string _inventoryName = string.Empty;
+    private DateTime? _dateFrom;
+    private DateTime? _dateTo;
+    private int _inventoryTransactionTypeId;
+    private IEnumerable<InventoryTransaction>? _inventoryTransactions;
 
     private void PrintReport()
     {
     }
 
-    private void SearchInventoryTransactions()
+    private async Task SearchInventoryTransactions()
     {
+        InventoryTransactionType? transactionType = null;
+        if (_inventoryTransactionTypeId != 0)
+        {
+            transactionType = (InventoryTransactionType)_inventoryTransactionTypeId;
+        }
+
+        _inventoryTransactions = await SearchInventoryTransactionUseCase.ExecuteAsync(_inventoryName, _dateFrom, _dateTo, transactionType);
     }
 
 }
