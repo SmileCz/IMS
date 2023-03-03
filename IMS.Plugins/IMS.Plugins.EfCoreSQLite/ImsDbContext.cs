@@ -43,10 +43,10 @@ public class ImsDbContext : DbContext
         );
 
         modelBuilder.Entity<ProductInventory>().HasData(
-            new ProductInventory { ProductId = 1, InventoryId = 1, InventoryQuality = 1 }, // seat
-            new ProductInventory { ProductId = 1, InventoryId = 2, InventoryQuality = 1 }, // body
-            new ProductInventory { ProductId = 1, InventoryId = 3, InventoryQuality = 2 }, // wheels
-            new ProductInventory { ProductId = 1, InventoryId = 4, InventoryQuality = 2 } // pedals
+            new() { ProductId = 1, InventoryId = 1, InventoryQuality = 1 }, // seat
+            new() { ProductId = 1, InventoryId = 2, InventoryQuality = 1 }, // body
+            new() { ProductId = 1, InventoryId = 3, InventoryQuality = 2 }, // wheels
+            new() { ProductId = 1, InventoryId = 4, InventoryQuality = 2 } // pedals
         );
     }
 }

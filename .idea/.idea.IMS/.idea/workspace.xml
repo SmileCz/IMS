@@ -6,20 +6,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="72481558-121f-4be2-b0a2-1e086920e4ed" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/IMS.Plugins/IMS.Plugins.EfCoreSQLite/ImsDbContext.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.IMS/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.IMS/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IMS.CoreBusiness/Inventory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IMS.CoreBusiness/Inventory.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IMS.Plugins/IMS.Plugins.InMemory.Test/IMS.Plugins.InMemory.Test.csproj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IMS.Plugins/IMS.Plugins.InMemory.Test/UnitTest1.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IMS.Plugins/IMS.Plugins.InMemory.Test/Usings.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IMS.Plugins/IMS.Plugins.InMemory/ProductRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IMS.Plugins/IMS.Plugins.InMemory/ProductRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IMS.WebApp.Test/Controls/Common/AutoCompleteComponentTests.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IMS.WebApp.Test/IMS.WebApp.Test.csproj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IMS.WebApp.Test/Usings.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IMS.WebApp/IMS.WebApp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/IMS.WebApp/IMS.WebApp.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IMS.WebApp/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IMS.WebApp/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IMS.WebApp/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/IMS.WebApp/appsettings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IMS.sln" beforeDir="false" afterPath="$PROJECT_DIR$/IMS.sln" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IMS.CoreBusiness/ProductInventory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IMS.CoreBusiness/ProductInventory.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IMS.Plugins/IMS.Plugins.EfCoreSQLite/ImsDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IMS.Plugins/IMS.Plugins.EfCoreSQLite/ImsDbContext.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -162,7 +150,7 @@
       <workItem from="1677691123399" duration="841000" />
       <workItem from="1677692020008" duration="113000" />
       <workItem from="1677765898827" duration="8283000" />
-      <workItem from="1677825439672" duration="7949000" />
+      <workItem from="1677825439672" duration="8165000" />
     </task>
     <task id="LOCAL-00001" summary="Add edit of product">
       <created>1676286025783</created>
@@ -290,7 +278,14 @@
       <option name="project" value="LOCAL" />
       <updated>1677774129631</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="[main]&#10; - Remove test projects&#10; - Add initial schema for db ( use SQLite)">
+      <created>1677834476971</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1677834476971</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -320,7 +315,8 @@
     <MESSAGE value="Inventory Transaction Report finished" />
     <MESSAGE value="Add printing feature" />
     <MESSAGE value="Remove test libraries - not now necessary&#10;Add init db context" />
-    <option name="LAST_COMMIT_MESSAGE" value="Remove test libraries - not now necessary&#10;Add init db context" />
+    <MESSAGE value="[main]&#10; - Remove test projects&#10; - Add initial schema for db ( use SQLite)" />
+    <option name="LAST_COMMIT_MESSAGE" value="[main]&#10; - Remove test projects&#10; - Add initial schema for db ( use SQLite)" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
