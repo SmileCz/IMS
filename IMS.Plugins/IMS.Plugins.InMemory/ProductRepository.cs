@@ -12,7 +12,7 @@ public class ProductRepository : IProductRepository
         _products = new List<Product>()
         {
             new() { Id = 1, Name = "Bike", Quantity = 10, Price = 150 },
-            new() { Id = 2, Name = "Car", Quantity = 5, Price = 25000 },
+            new() { Id = 2, Name = "Car", Quantity = 5, Price = 25000 }
         };
     }
 

@@ -6,16 +6,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="72481558-121f-4be2-b0a2-1e086920e4ed" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/IMS.UseCases/Reports/Interfaces/ISearchProductTransactionUseCase.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IMS.UseCases/Reports/SearchProductTransactionUseCase.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IMS.WebApp/Pages/Reports/ProductTransactionReport.razor" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/IMS.Plugins/IMS.Plugins.EfCoreSQLite/ImsDbContext.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.IMS/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.IMS/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IMS.Plugins/IMS.Plugins.InMemory/ProductTransactionRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IMS.Plugins/IMS.Plugins.InMemory/ProductTransactionRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IMS.UseCases/PluginInterfaces/IProductTransactionRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IMS.UseCases/PluginInterfaces/IProductTransactionRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IMS.CoreBusiness/Inventory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IMS.CoreBusiness/Inventory.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IMS.Plugins/IMS.Plugins.InMemory.Test/IMS.Plugins.InMemory.Test.csproj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IMS.Plugins/IMS.Plugins.InMemory.Test/UnitTest1.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IMS.Plugins/IMS.Plugins.InMemory.Test/Usings.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IMS.Plugins/IMS.Plugins.InMemory/ProductRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IMS.Plugins/IMS.Plugins.InMemory/ProductRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IMS.WebApp.Test/Controls/Common/AutoCompleteComponentTests.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IMS.WebApp.Test/IMS.WebApp.Test.csproj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IMS.WebApp.Test/Usings.cs" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/IMS.WebApp/IMS.WebApp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/IMS.WebApp/IMS.WebApp.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IMS.WebApp/Pages/Reports/InventoryTransactionReport.razor" beforeDir="false" afterPath="$PROJECT_DIR$/IMS.WebApp/Pages/Reports/InventoryTransactionReport.razor" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/IMS.WebApp/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IMS.WebApp/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IMS.WebApp/wwwroot/css/site.css" beforeDir="false" afterPath="$PROJECT_DIR$/IMS.WebApp/wwwroot/css/site.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IMS.WebApp/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/IMS.WebApp/appsettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IMS.sln" beforeDir="false" afterPath="$PROJECT_DIR$/IMS.sln" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,12 +51,10 @@
     </option>
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/4b74b6c4aaa81391e03711c258f8938cb5e58ebcef7fca8c5548823dc9e915/ValidationResult.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/869cabb92e82cc3e3fd32a575042337f9bdd2aed2413fbcc4fbdb3a44d1172/Renderer.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/9a3e639d94986eddab1a9a78d348cfaa4f59bc1e3a8cbc3bd46e01ed6f2/Timer.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/aacc74311ca994f12b71cddb22241be9d6654c65e94f5985c5488dee396916f/DbContext.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/e4aeff2964b57fa3d88b3b827c8344358321bf183055702dd3aed52b8f7c97/ComponentState.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/IMS.Plugins/IMS.Plugins.InMemory/InventoryRepository.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
@@ -81,6 +83,9 @@
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "sqlite"
+    ],
     "rider.external.source.directories": [
       "C:\\Users\\pavel\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\DecompilerCache",
       "C:\\Users\\pavel\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\SourcesCache",
@@ -88,7 +93,7 @@
     ]
   }
 }]]></component>
-  <component name="RunManager" selected=".NET Launch Settings Profile.IMS.WebApp">
+  <component name="RunManager" selected="Publish to custom server.Publish IMS.WebApp to custom server">
     <configuration name="IMS.WebApp" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
       <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/IMS.WebApp/IMS.WebApp.csproj" />
       <option name="LAUNCH_PROFILE_TFM" value="net6.0" />
@@ -156,7 +161,8 @@
       <workItem from="1677673646446" duration="3802000" />
       <workItem from="1677691123399" duration="841000" />
       <workItem from="1677692020008" duration="113000" />
-      <workItem from="1677765898827" duration="7961000" />
+      <workItem from="1677765898827" duration="8283000" />
+      <workItem from="1677825439672" duration="7949000" />
     </task>
     <task id="LOCAL-00001" summary="Add edit of product">
       <created>1676286025783</created>
@@ -277,7 +283,14 @@
       <option name="project" value="LOCAL" />
       <updated>1677768061149</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Add printing feature">
+      <created>1677774129631</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1677774129631</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -305,7 +318,9 @@
     <MESSAGE value="Add SearchInventoryTransaction use case" />
     <MESSAGE value="Add Inventory Transaction Report page without functionality" />
     <MESSAGE value="Inventory Transaction Report finished" />
-    <option name="LAST_COMMIT_MESSAGE" value="Inventory Transaction Report finished" />
+    <MESSAGE value="Add printing feature" />
+    <MESSAGE value="Remove test libraries - not now necessary&#10;Add init db context" />
+    <option name="LAST_COMMIT_MESSAGE" value="Remove test libraries - not now necessary&#10;Add init db context" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />

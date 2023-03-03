@@ -1,3 +1,4 @@
+using IMS.Plugins.EfCoreSQLite;
 using IMS.Plugins.InMemory;
 using IMS.UseCases.Activities;
 using IMS.UseCases.Activities.Interfaces;
@@ -7,6 +8,7 @@ using IMS.UseCases.PluginInterfaces;
 using IMS.UseCases.Products;
 using IMS.UseCases.Products.Interfaces;
 using IMS.UseCases.Reports;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -15,6 +17,11 @@ builder.Services.AddControllers();
 builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
 builder.Services.AddLocalization(options => options.ResourcesPath = "Resources");
+builder.Services.AddDbContext<ImsDbContext>(options =>
+{
+    options.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection"));
+});
+
 
 builder.Services.AddSingleton<IInventoryRepository, InventoryRepository>();
 builder.Services.AddSingleton<IProductRepository, ProductRepository>();
