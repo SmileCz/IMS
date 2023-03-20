@@ -1,19 +1,24 @@
-﻿ @inherits LayoutComponentBase
-
-<PageTitle>IMS.WebApp</PageTitle>
-
-<div class="page">
-    <div class="sidebar">
+﻿@inherits LayoutComponentBase
+<MudThemeProvider/>
+<MudDialogProvider/>
+<MudLayout>
+    <MudAppBar Elevation="1" Dense="true">
+        <MudIconButton Icon="@Icons.Material.Filled.Menu" Color="Color.Inherit" Edge="Edge.Start" OnClick="@ToggleDrawer"/>
+    </MudAppBar>
+    <MudDrawer @bind-Open="@open" ClipMode="@DrawerClipMode.Docked" Elevation="1" Variant="@DrawerVariant.Responsive">
         <NavMenu/>
-    </div>
+    </MudDrawer>
+    <MudMainContent Class="pt-16 px-16">
+        @Body
+    </MudMainContent>
+</MudLayout>
 
-    <main>
-        <div class="top-row px-4">
-            <a href="https://docs.microsoft.com/aspnet/" target="_blank">About</a>
-        </div>
+@code{
+    bool open = false;
 
-        <article class="content px-4">
-            @Body
-        </article>
-    </main>
-</div>
+    void ToggleDrawer()
+    {
+        open = !open;
+    }
+
+}

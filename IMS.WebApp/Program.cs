@@ -9,6 +9,7 @@ using IMS.UseCases.Products;
 using IMS.UseCases.Products.Interfaces;
 using IMS.UseCases.Reports;
 using Microsoft.EntityFrameworkCore;
+using MudBlazor.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -16,6 +17,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
+builder.Services.AddMudServices();
 builder.Services.AddLocalization(options => options.ResourcesPath = "Resources");
 builder.Services.AddDbContext<ImsDbContext>(options =>
 {

@@ -45,7 +45,7 @@
     private async Task Purchase()
     {
         await PurchaseInventoryUseCase.ExecuteAsync(_purchaseViewModel.PoNumber,
-            _selectedInventory,
+            _selectedInventory!,
             _purchaseViewModel.QuantityToPurchase, "Anynomous");
         _purchaseViewModel = new();
         _selectedInventory = null;

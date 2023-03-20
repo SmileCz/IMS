@@ -40,7 +40,7 @@
 
     private async Task Produce()
     {
-        await ProduceProductUseCase.ExecuteAsync(_produceViewModel.ProductionNumber, _selectedProduct, _produceViewModel.QuantityToProduce, "Anynomous");
+        await ProduceProductUseCase.ExecuteAsync(_produceViewModel.ProductionNumber, _selectedProduct!, _produceViewModel.QuantityToProduce, "Anynomous");
         _produceViewModel = new();
         _selectedProduct = null;
     }

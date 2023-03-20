@@ -31,7 +31,7 @@ public partial class AutoCompleteComponent : ComponentBase
             {
                 if (_selectedItem?.Name != _userInput)
                 {
-                    ViewItemAsync();
+                    ViewItemAsync().GetAwaiter().GetResult();
                 }
             }
             else
