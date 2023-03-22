@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net7.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+      
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Havit.Extensions.Localization" Version="1.0.7" />
+      <PackageReference Include="Havit.SourceGenerators.StrongApiStringLocalizers" Version="1.0.8" />
+      <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="7.0.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <Folder Include="Model\" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <EmbeddedResource Update="Example.resx">
+        <Generator>ResXFileCodeGenerator</Generator>
+        <LastGenOutput>Example.Designer.cs</LastGenOutput>
+      </EmbeddedResource>
+    </ItemGroup>
+    
+
+</Project>
